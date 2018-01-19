@@ -14,7 +14,7 @@ const Nav = props => {
                     <Link to="/" >Home</Link>
                 </li>
                 <li>
-                    <Link to="/movie-quots">Movie Quotes</Link>
+                    <Link to="/movie-quotes">Movie Quotes</Link>
                 </li>
                 <li>
                     <Link to="/sign-in">Sign In</Link>
