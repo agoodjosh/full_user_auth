@@ -40,3 +40,29 @@ export function signIn(cred) {
         });
     }
 }
+
+export function getQuote() {
+
+    const config = {
+        headers: {
+            authorization: localStorage.getItem('token')
+        }
+    };
+
+    return (dispatch) => {
+        axios.get(BASE_URL, config).then(resp => {
+            dispatch({
+                type: types.GET_QUOTE,
+                payload: resp.data.message
+            });
+        });
+    }
+}
+
+export function logOut() {
+    localStorage.removeItem('token');
+
+    return {
+        type: types.LOG_OUT
+    }
+}
